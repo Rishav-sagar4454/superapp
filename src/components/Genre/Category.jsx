@@ -1,4 +1,4 @@
-import styles from './category.css'
+import styles from './Category.module.css'
 import action from '../../assests/action.png'
 import drama from '../../assests/drama.png'
 import fantasy from '../../assests/fantasy.png'
@@ -9,6 +9,7 @@ import romance from '../../assests/romance.png'
 import thriller from '../../assests/thriller.png'
 import western from '../../assests/western.png'
 import { useState, useEffect } from 'react'
+import Chips from '../Global/Chips'
 import { useNavigate } from 'react-router-dom'
 const genres = [
     {
@@ -73,8 +74,8 @@ const Category = ()=>{
                 <p className={styles.heading}>Super app</p>
                 <p className={styles.subHeading}>Choose your entertainment category</p>
                 <div style={{marginTop:"10vh"}}>
-                {/* <Chips categories={categories} color={"green"}  setCategories={setCategories}/> */}
-                {/* {lengthError?<p className={styles.error}>Please choose at least 3</p>:<></>} */}
+                <Chips categories={categories} color={"green"}  setCategories={setCategories}/>
+                {lengthError?<p className={styles.error}>Please choose at least 3</p>:<></>}
                 </div>
             </div>
             <div className={styles.right}>

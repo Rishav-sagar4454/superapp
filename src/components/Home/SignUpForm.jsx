@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import styles from './signup.css'
+import styles from './Signup.css'
 import { useNavigate } from 'react-router-dom'
 import homepage from '../../assests/homepage.png'
 const SignUpForm = ()=>{
@@ -55,15 +55,13 @@ const SignUpForm = ()=>{
     }
     return(
         
-        <>
-            <div className='left-section'>
-            <img  src= {homepage} alt='homepage'/>
-            
-            <p className='discover' >Discover new things on Superapp</p>
-
+        < >
+            <div className={styles.leftsection}>
+            <p className='discover'>Discover new things on SuperApp</p>
             </div>
-            <div className='right-section'>
-            <p>Super App</p>
+            <img  src= {homepage} alt='homepage'/>
+            <div className="rightsection">
+            <p className='super'>Super App</p>
             <p>Create your new Account</p>
             <form>
                 <input onChange={(e)=>handleChange(e)}  type="text" name='name'  placeholder="Name"></input>
