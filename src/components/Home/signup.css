@@ -17,11 +17,11 @@
     font-size: 3rem;
     margin-bottom: 10px;
 }
-img{
+/* img{
     width: 50vw;
     min-height: 100vh;
     
-}
+} */
 /* .leftsection {
     width: 50vw;
     background-color: black;
@@ -38,7 +38,7 @@ img{
     width: 50vw;
     background-color: black;
     margin-left: 0%;
-    display: flex;
+    display:flow-root;
     justify-content: center;
     flex-direction: column;
     color: white;
@@ -65,7 +65,7 @@ form label{
 .discover{
 
     position: absolute;
-    bottom: 1vh;
+    bottom: -5vh;
     left: 2vw;
     color: white;
     font-size:55px;
@@ -98,4 +98,8 @@ form button{
     margin: 12px auto;
     text-align: left;
     line-height: 1.2rem;
+}
+form .error{
+    color: red;
+    font-size: 12px;
 }
