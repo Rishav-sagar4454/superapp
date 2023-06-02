@@ -14,7 +14,7 @@ const Browse = ()=>{
         <div style={{display:"flex",gap:"20px"}}>
         <div>
         <Info/>
-        <Weather/>
+        {/* <Weather/> */}
         {/* <Timer/> */}
         </div>
         <div>

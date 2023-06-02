@@ -57,11 +57,11 @@ const SignUpForm = ()=>{
         
         < >
             <div className={styles.leftsection}>
-            <p className='discover'>Discover new things on SuperApp</p>
+            <p className={styles.discover}>Discover new things on SuperApp</p>
             </div>
             <img  src= {homepage} alt='homepage'/>
-            <div className="rightsection">
-            <p className='super'>Super App</p>
+            <div className={styles.rightsection}>
+            <p className={styles.super}>Super App</p>
             <p>Create your new Account</p>
             <form>
                 <input onChange={(e)=>handleChange(e)}  type="text" name='name'  placeholder="Name"></input>
