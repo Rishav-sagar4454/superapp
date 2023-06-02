@@ -3,16 +3,16 @@ const Weather = ()=>{
     const [date, setDate] = useState("")
     const [time, setTime] = useState("")
     const [weather, setWeather] = useState(false)
-    // console.log(weather)
+    console.log(weather)
     useEffect(()=>{
         const fetchWeather = async()=>{
-            await fetch("http://api.weatherapi.com/v1/current.json?key=987de39fe8924052ada80850232502&q=London&aqi=no")
+            await fetch("https://www.weatherapi.com/docs/conditions.json")
                 .then(async(data)=>await data.json()).then((data)=>setWeather(data)) 
         }
         fetchWeather()
     },[])
     useEffect(()=>{
-        const date = new Date
+        const date = new Date ();
         var hours = date.getHours();
         var minutes = date.getMinutes();
         var ampm = hours >= 12 ? 'pm' : 'am';
@@ -20,8 +20,8 @@ const Weather = ()=>{
         hours = hours ? hours : 12; // the hour '0' should be '12'
         minutes = minutes < 10 ? '0'+minutes : minutes;
         var strTime = hours + ':' + minutes + ' ' + ampm;
-        setTime(strTime)
-    })
+        setTime(strTime);
+    }, []);
     useEffect(()=>{
         const today = new Date();
         const yyyy = today.getFullYear();
@@ -33,7 +33,7 @@ const Weather = ()=>{
 
         const formattedToday = dd + '-' + mm + '-' + yyyy;
         setDate(formattedToday)
-    })
+    } , []);
     return (
         <div style={{width:"30vw",minHeight:"20vh",background:'#101744',borderRadius:"12px", marginTop:"5px"}}>
             <div style={{height:"7vh", background:"#FF4ADE", borderRadius:"12px", color:"white",display:"flex", justifyContent:"space-evenly", alignItems:"center", fontSize:"2rem"}}>
@@ -59,11 +59,3 @@ const Weather = ()=>{
 }
 
 export default Weather
-
-
-
-//current.condition.icon, text
-//current.temp_c
-//current.pressure_mb
-//current.wind_kph
-//current.humidity

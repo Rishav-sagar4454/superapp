@@ -2,7 +2,7 @@ import Info from '../components/Browse/Info'
 import Weather from '../components/Browse/Weather'
 import Notes from '../components/Browse/Notes'
 import News from '../components/Browse/News'
-import Timer from '../components/Browse/Timer'
+// import Timer from '../components/Browse/Timer'
 import { useNavigate } from 'react-router-dom'
 const Browse = ()=>{
     const navigate = useNavigate()
@@ -15,7 +15,7 @@ const Browse = ()=>{
         <div>
         <Info/>
         <Weather/>
-        <Timer/>
+        {/* <Timer/> */}
         </div>
         <div>
             <Notes/>
