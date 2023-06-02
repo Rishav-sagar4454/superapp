@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import styles from './Signup.css'
+import styles from './Signup.module.css'
 import { useNavigate } from 'react-router-dom'
 import homepage from '../../assests/homepage.png'
 const SignUpForm = ()=>{
